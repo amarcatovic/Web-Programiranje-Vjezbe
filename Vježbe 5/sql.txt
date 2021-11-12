@@ -1,0 +1,15 @@
+CREATE SCHEMA `vjezbe5`;
+USE `vjezbe5`;
+
+CREATE TABLE users
+(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    username NVARCHAR(50) UNIQUE NOT NULL,
+    address NVARCHAR(100) NOT NULL,
+    password NVARCHAR(100) NOT NULL,
+    role SMALLINT NOT NULL
+);
+
+INSERT INTO users (username, address, password, role) VALUE ('admin', 'sta te briga', 'admin', 1);
+
+SELECT * FROM users;
